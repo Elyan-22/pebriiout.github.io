@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>Alert Page</title>
+<style>
+  body {
+    background-color: black;
+    color: red;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+  }
+  h1 {
+    font-size: 4em;
+    margin-top: 20vh;
+    animation: pulse 1s infinite alternate;
+  }
+  .marquee {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 2em;
+    color: yellow;
+    animation: marquee 10s linear infinite;
+  }
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  @keyframes pulse {
+    from { text-shadow: 0 0 5px red, 0 0 10px red; }
+    to { text-shadow: 0 0 20px yellow, 0 0 40px orange; }
+  }
+</style>
 </head>
 <body>
 
-<h1>PEBRI OUT !!! </h1>
+<h1>🚨 PEBRI OUT !!! 🚨</h1>
 
+<div class="marquee">⚡ Breaking News: PEBRI officially OUT! Stay tuned for more updates... ⚡</div>
 
 </body>
 </html>
